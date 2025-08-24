@@ -420,40 +420,48 @@ body {
 .hero-visual {
     position: relative;
     height: 500px;
+    overflow: hidden;
 }
 
 .visual-container {
     position: relative;
     width: 100%;
     height: 100%;
+    min-width: 400px;
 }
 
 .floating-card {
     position: absolute;
     background: var(--primary-50);  /* Light gray background */
     border-radius: var(--radius-xl);
-    padding: var(--space-6);
+    padding: var(--space-4);
     box-shadow: var(--shadow-lg);
     border: 1px solid rgba(139, 123, 122, 0.2);
     animation: floatCard 6s ease-in-out infinite;
+    width: 200px;
+    min-height: 120px;
+    z-index: 1;
 }
 
 .card-1 {
-    top: 20%;
-    left: 10%;
+    top: 10%;
+    left: 5%;
     animation-delay: 0s;
+    z-index: 3;
 }
 
 .card-2 {
-    top: 50%;
-    right: 20%;
+    top: 35%;
+    right: 5%;
     animation-delay: 2s;
+    z-index: 2;
 }
 
 .card-3 {
-    bottom: 20%;
-    left: 30%;
+    bottom: 10%;
+    left: 25%;
     animation-delay: 4s;
+    z-index: 1;
 }
 
 @keyframes floatCard {
@@ -1258,6 +1266,32 @@ body.dark-mode .load-more-btn:hover {
     
     .hero-stats {
         justify-content: center;
+    }
+    
+    .hero-visual {
+        height: 300px;
+        margin-top: var(--space-8);
+    }
+    
+    .floating-card {
+        width: 160px;
+        min-height: 100px;
+        padding: var(--space-3);
+    }
+    
+    .card-1 {
+        top: 5%;
+        left: 2%;
+    }
+    
+    .card-2 {
+        top: 40%;
+        right: 2%;
+    }
+    
+    .card-3 {
+        bottom: 5%;
+        left: 20%;
     }
     
     .jobs-header {
