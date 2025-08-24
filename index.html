@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Jobs Hub - Premium Remote Opportunities</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='18' stroke='%23A89B9A' stroke-width='2' fill='none'/%3E%3Cpath d='M20 2C20 2 12 8 12 20C12 32 20 38 20 38' stroke='%23A89B9A' stroke-width='1.5' fill='none'/%3E%3Cpath d='M20 2C20 2 28 8 28 20C28 32 20 38 20 38' stroke='%23A89B9A' stroke-width='1.5' fill='none'/%3E%3Cpath d='M4 20C4 20 10 16 20 16C30 16 36 20 36 20' stroke='%23A89B9A' stroke-width='1.5' fill='none'/%3E%3Cpath d='M6 12C6 12 12 14 20 14C28 14 34 12 34 12' stroke='%23A89B9A' stroke-width='1.5' fill='none'/%3E%3Cpath d='M6 28C6 28 12 26 20 26C28 26 34 28 34 28' stroke='%23A89B9A' stroke-width='1.5' fill='none'/%3E%3Ccircle cx='20' cy='8' r='2' fill='%23A89B9A'/%3E%3Ccircle cx='32' cy='20' r='2' fill='%23A89B9A'/%3E%3Ccircle cx='8' cy='20' r='2' fill='%23A89B9A'/%3E%3Ccircle cx='20' cy='32' r='2' fill='%23A89B9A'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="modern-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Globe/World Icon -->
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none" />
+                        <!-- Longitude lines -->
+                        <path d="M20 2C20 2 12 8 12 20C12 32 20 38 20 38" stroke="currentColor" stroke-width="1.5"
+                            fill="none" />
+                        <path d="M20 2C20 2 28 8 28 20C28 32 20 38 20 38" stroke="currentColor" stroke-width="1.5"
+                            fill="none" />
+                        <!-- Latitude lines -->
+                        <path d="M4 20C4 20 10 16 20 16C30 16 36 20 36 20" stroke="currentColor" stroke-width="1.5"
+                            fill="none" />
+                        <path d="M6 12C6 12 12 14 20 14C28 14 34 12 34 12" stroke="currentColor" stroke-width="1.5"
+                            fill="none" />
+                        <path d="M6 28C6 28 12 26 20 26C28 26 34 28 34 28" stroke="currentColor" stroke-width="1.5"
+                            fill="none" />
+                        <!-- Connection dots -->
+                        <circle cx="20" cy="8" r="2" fill="currentColor" />
+                        <circle cx="32" cy="20" r="2" fill="currentColor" />
+                        <circle cx="8" cy="20" r="2" fill="currentColor" />
+                        <circle cx="20" cy="32" r="2" fill="currentColor" />
+                    </svg>
+                </div>
+                <span class="brand-text">RemoteHub</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="#jobs" class="nav-item">Jobs</a>
+                <a href="#companies" class="nav-item">Companies</a>
+                <a href="#about" class="nav-item">About</a>
+                <button id="darkModeToggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="nav-mobile">
+                <button class="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Premium Remote Opportunities</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Discover your next</span>
+                    <span class="title-line highlight">remote career</span>
+                </h1>
+                <p class="hero-description">
+                    Connect with world-class companies offering remote positions.
+                    Join thousands of professionals who've found their dream jobs through our platform.
+                </p>
+                <div class="hero-search">
+                    <div class="search-container">
+                        <div class="search-group">
+                            <div class="search-field">
+                                <label class="search-label">What</label>
+                                <input type="text" id="roleInput" placeholder="Job title, keywords..."
+                                    class="search-input">
+                            </div>
+                            <div class="search-divider"></div>
+                            <div class="search-field">
+                                <label class="search-label">Where</label>
+                                <input type="text" id="locationInput" placeholder="Remote, Worldwide"
+                                    class="search-input">
+                            </div>
+                        </div>
+                        <button id="searchBtn" class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" id="totalJobs">0</span>
+                        <span class="stat-label">Active Jobs</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="totalCompanies">0</span>
+                        <span class="stat-label">Companies</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="totalInternships">0</span>
+                        <span class="stat-label">Internships</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-container">
+                    <div class="floating-card card-1">
+                        <div class="card-header">
+                            <img src="https://logo.clearbit.com/google.com" alt="Google" class="company-logo-img">
+                            <div class="card-info">
+                                <h4>Senior Developer</h4>
+                                <p>Google</p>
+                            </div>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">Remote</span>
+                            <span class="tag">Full-time</span>
+                        </div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-header">
+                            <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="company-logo-img">
+                            <div class="card-info">
+                                <h4>Product Designer</h4>
+                                <p>Microsoft</p>
+                            </div>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">Remote</span>
+                            <span class="tag">Contract</span>
+                        </div>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-header">
+                            <img src="https://logo.clearbit.com/apple.com" alt="Apple" class="company-logo-img">
+                            <div class="card-info">
+                                <h4>Data Scientist</h4>
+                                <p>Apple</p>
+                            </div>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">Remote</span>
+                            <span class="tag">Full-time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-container">
+            <div class="features-header">
+                <h2 class="section-title">Why choose RemoteHub</h2>
+                <p class="section-description">
+                    We connect top talent with leading companies worldwide
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="feature-title">Global Opportunities</h3>
+                    <p class="feature-description">
+                        Access remote jobs from companies across 50+ countries
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Verified Companies</h3>
+                    <p class="feature-description">
+                        All companies are thoroughly vetted for legitimacy and quality
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="feature-title">Fast Applications</h3>
+                    <p class="feature-description">
+                        Apply to multiple positions with one-click applications
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section class="jobs-section" id="jobs">
+        <div class="jobs-container">
+            <div class="jobs-header">
+                <div class="jobs-title-group">
+                    <h2 class="section-title">Latest Opportunities</h2>
+                    <p class="section-description">Discover your next career move</p>
+                </div>
+                <div class="jobs-controls">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">All Jobs</button>
+                        <button class="filter-tab" data-filter="full-time">Full-time</button>
+                        <button class="filter-tab" data-filter="contract">Contract</button>
+                        <button class="filter-tab" data-filter="internship">Internships</button>
+                    </div>
+                    <select id="sortBy" class="sort-select">
+                        <option value="date">Latest First</option>
+                        <option value="company">Company A-Z</option>
+                        <option value="title">Job Title A-Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="loading-state" id="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading opportunities...</p>
+            </div>
+
+            <div class="jobs-grid" id="jobsGrid">
+                <!-- Jobs will be populated here -->
+            </div>
+
+            <div class="load-more-section">
+                <button id="loadMoreBtn" class="load-more-btn">
+                    <span>Load More Opportunities</span>
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section class="companies" id="companies">
+        <div class="companies-container">
+            <div class="companies-header">
+                <h2 class="section-title">Trusted by leading companies</h2>
+                <p class="section-description">Join professionals working at these amazing companies</p>
+            </div>
+            <div class="companies-grid">
+                <img src="https://logo.clearbit.com/google.com" alt="Google" class="company-logo-img">
+                <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="company-logo-img">
+                <img src="https://logo.clearbit.com/apple.com" alt="Apple" class="company-logo-img">
+                <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" class="company-logo-img">
+                <img src="https://logo.clearbit.com/meta.com" alt="Meta" class="company-logo-img">
+                <img src="https://logo.clearbit.com/netflix.com" alt="Netflix" class="company-logo-img">
+                <img src="https://logo.clearbit.com/spotify.com" alt="Spotify" class="company-logo-img">
+                <img src="https://logo.clearbit.com/airbnb.com" alt="Airbnb" class="company-logo-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About RemoteHub</h2>
+                    <p class="section-description">
+                        We're revolutionizing the way professionals find remote work opportunities worldwide.
+                    </p>
+                    <div class="about-details">
+                        <p>
+                            Founded in 2024, RemoteHub connects talented professionals with leading companies
+                            offering remote positions. Our platform bridges the gap between top-tier talent
+                            and innovative companies, creating opportunities for meaningful remote work.
+                        </p>
+                        <p>
+                            We believe that great work can happen anywhere. That's why we've built a platform
+                            that makes it easy for companies to find exceptional remote talent and for
+                            professionals to discover their next career opportunity.
+                        </p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="about-stat-number">10,000+</span>
+                            <span class="about-stat-label">Jobs Posted</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">500+</span>
+                            <span class="about-stat-label">Partner Companies</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">50+</span>
+                            <span class="about-stat-label">Countries</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-image">
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Global Community</h4>
+                            <p>Connect with professionals worldwide</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h4>Trusted Partners</h4>
+                            <p>Work with verified companies</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Career Growth</h4>
+                            <p>Advance your remote career</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="brand-icon">
+                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Globe/World Icon -->
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none" />
+                                <!-- Longitude lines -->
+                                <path d="M20 2C20 2 12 8 12 20C12 32 20 38 20 38" stroke="currentColor"
+                                    stroke-width="1.5" fill="none" />
+                                <path d="M20 2C20 2 28 8 28 20C28 32 20 38 20 38" stroke="currentColor"
+                                    stroke-width="1.5" fill="none" />
+                                <!-- Latitude lines -->
+                                <path d="M4 20C4 20 10 16 20 16C30 16 36 20 36 20" stroke="currentColor"
+                                    stroke-width="1.5" fill="none" />
+                                <path d="M6 12C6 12 12 14 20 14C28 14 34 12 34 12" stroke="currentColor"
+                                    stroke-width="1.5" fill="none" />
+                                <path d="M6 28C6 28 12 26 20 26C28 26 34 28 34 28" stroke="currentColor"
+                                    stroke-width="1.5" fill="none" />
+                                <!-- Connection dots -->
+                                <circle cx="20" cy="8" r="2" fill="currentColor" />
+                                <circle cx="32" cy="20" r="2" fill="currentColor" />
+                                <circle cx="8" cy="20" r="2" fill="currentColor" />
+                                <circle cx="20" cy="32" r="2" fill="currentColor" />
+                            </svg>
+                        </div>
+                        <span class="brand-text">RemoteHub</span>
+                    </div>
+                    <p class="footer-description">
+                        Connecting global talent with premium remote opportunities worldwide.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Platform</h4>
+                        <ul class="footer-list">
+                            <li><a href="#jobs">Browse Jobs</a></li>
+                            <li><a href="#companies">Companies</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Categories</h4>
+                        <ul class="footer-list">
+                            <li><a href="#tech">Technology</a></li>
+                            <li><a href="#design">Design</a></li>
+                            <li><a href="#marketing">Marketing</a></li>
+                            <li><a href="#sales">Sales</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Resources</h4>
+                        <ul class="footer-list">
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#help">Help Center</a></li>
+                            <li><a href="#privacy">Privacy</a></li>
+                            <li><a href="#terms">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RemoteHub. All rights reserved.</p>
+                <p>Made with ❤️ for remote workers worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="simple-script.js"></script>
+</body>
+
+</html>
